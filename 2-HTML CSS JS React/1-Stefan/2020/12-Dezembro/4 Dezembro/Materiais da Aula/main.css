@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #cd5ea6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#square {
+  width: 200pt;
+  height: 200pt;
+  background-color: #f47251;
+}
+
+#switch {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5pt;
+  margin-top: 1rem;
+  background-color: yellow;
+  font-size: large;
+  color: purple;
+  font-weight: bold;
+  outline: none;
+}

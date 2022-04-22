@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lit-yellow {
+  color: rgb(255, 251, 198);
+  text-shadow: 2px 2px 50px rgb(255, 251, 198);
+}
+
+.lit-pink {
+  color: rgb(250, 198, 255);
+  text-shadow: 2px 2px 50px rgb(250, 198, 255);
+}
+
+.lit-purple {
+  color: rgb(169, 103, 255);
+  text-shadow: 2px 2px 50px rgb(169, 103, 255);
+}
+
+.lit-red {
+  color: rgb(255, 153, 146);
+  text-shadow: 2px 2px 50px rgb(255, 153, 146);
+}
+
+.lit-green {
+  color: rgb(153, 255, 195);
+  text-shadow: 2px 2px 50px rgb(153, 255, 195);
+}
+
+.lit-blue {
+  color: rgb(134, 183, 255);
+  text-shadow: 2px 2px 50px rgb(134, 183, 255);
+}
+
+#bulb-container {
+  display: block;
+  position: absolute;
+  margin: auto;
+}
+
+#light-bulb {
+  font-size: 100pt;
+  transition: all 0.5s ease;
+}
+
+#light-switch {
+  font-size: 15pt;
+  padding: 10pt;
+  border-radius: 50%;
+  border: none;
+}

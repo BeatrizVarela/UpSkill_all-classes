@@ -1,0 +1,238 @@
+/*scroll bar*/
+/*width */
+::-webkit-scrollbar {
+    width: 10px;
+}  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(43, 170, 255); 
+}  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 138, 202); 
+}  
+/* Handle on hover */
+/*::-webkit-scrollbar-thumb:hover {
+     background: #555; 
+}*/
+/*body*/
+body {
+    background-image: url("oh_no_header2.png");
+    background-color: rgb(43, 170, 255);
+    background-size: 50%;
+    background-repeat: repeat;
+}
+/*navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(151, 253, 147);
+}
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Roboto";
+}
+li a:hover:not(.active) {
+    background-color: rgb(255, 245, 102);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+}
+.active {
+    background-color: rgb(255, 138, 202);
+}
+/*OH NO header*/
+.header1 {
+    width: 30%;
+    display: block;
+    margin: 1pt auto;
+    border: 3px solid black;
+    background-color: rgba(151, 253, 147, 0.9);
+    text-align: center;
+    font-size: 40pt;
+    font-family: "Indie Flower";
+}
+/*pink text box*/
+.p1 {
+    display: block;
+    margin: auto;
+    padding: 25px;
+    width: 80%;
+    font-size: 14pt;
+    border: 3px solid black;
+    background-color: rgba(255, 138, 202, 0.9);
+    font-family: "Roboto";
+}
+/*about*/
+.p2 {
+    display: inline-block;
+    vertical-align: top ;
+    margin: auto 20pt 20pt 60pt;
+    margin-right:20px;
+    padding: 25px;
+    width: 40%;
+    font-size: 14pt;
+    border: 3px solid black;
+    background-color: rgba(255, 138, 202, 0.9);
+    font-family: "Roboto";
+}
+.i2 {
+    display: inline-block;
+    margin: auto 20pt 20pt;
+    width: 40%;
+    border: 3px solid black;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 47%;
+    border: 3px solid black;
+}
+/*social networks*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 8%;
+    position: relative;
+}
+.i {
+    display: block;
+    position: relative;
+    width: 60%;
+    height: auto;
+    border: 3px solid black;
+    background-color: rgb(255, 138, 202);
+}
+.image {
+    display: block;
+    width: 94%;
+    padding: 3%;
+}
+.overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ;
+    background-color:rgba(255, 245, 102, 0.8);
+}
+.overlay2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ;
+    background-color: rgba(255, 138, 202, 0.8);
+}
+.overlay3 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ;
+    background-color: rgba(151, 253, 147, 0.8);
+}
+.overlay4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ;
+    background-color: rgba(43, 170, 255, 0.8); 
+}
+.overlay5 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .2s ;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+.text {
+    color: rgb(70, 0, 64);
+    font-family: "Indie Flower";
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.i:hover .overlay1 {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 3px solid black;
+}
+.i:hover .overlay2 {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 3px solid black;
+}
+.i:hover .overlay3 {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 3px solid black;
+}
+.i:hover .overlay4 {
+    opacity: 1;
+    transform: scale(1.1);
+    border: 3px solid black;
+}
+
+/*prints*/
+.grid-container2 {
+    padding-left: 8%;
+}
+.printImg {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    border: 3px solid black;
+    background-color: rgb(255, 138, 202);
+    width: 50%;
+}
+.classeImg {
+    width: 50%;
+}
+.classe1 {
+    position: relative;
+}
+.classe1:hover .overlay5 {
+    opacity: 1;
+    border: 3px solid black;
+}
+

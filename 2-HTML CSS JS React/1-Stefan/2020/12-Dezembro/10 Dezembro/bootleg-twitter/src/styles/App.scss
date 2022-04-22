@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  button:hover {
+    background-color: rgb(158, 222, 233);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@import "./TweetList";

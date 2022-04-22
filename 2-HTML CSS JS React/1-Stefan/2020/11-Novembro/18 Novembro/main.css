@@ -1,0 +1,56 @@
+/* Isto é um comentário */
+
+* {
+    font-size: 50pt;
+    background-color: rebeccapurple;
+}
+
+h1 {
+    color: red;
+}
+
+.custom_paragraph {
+    font-size: larger;
+    color: salmon;
+    background-color: seagreen;
+}
+
+#first_header {
+    font-size: smaller;
+}
+
+a {
+    border: 2px solid slategrey;
+}
+
+li>a {
+    margin-left: 2em;
+}
+
+li>a>p {
+    color: violet;
+}
+
+h1+p {
+    color: yellowgreen;
+}
+
+h1~p {
+color: yellowgreen;
+}
+
+h1[id] {
+    background-color: tomato;
+}
+
+a[target=_blank] {
+    color: wheat;
+}
+
+[href*="google"] {
+    color: brown  !important;
+}
+
+h1 {
+    color: #ff00003c !important;
+}

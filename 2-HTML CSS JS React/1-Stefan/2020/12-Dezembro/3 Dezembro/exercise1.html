@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Examples</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div id="bulb-container">
+      <h1 id="light-bulb"><i class="fas fa-lightbulb"></i></h1>
+      <form>
+        <button type="button" id="light-switch">
+          <i class="fas fa-power-off"></i>
+        </button>
+        <select id="color-picker">
+          <option value="yellow" selected>Kiroi</option>
+          <option value="pink">Pinku</option>
+          <option value="purple">Murasaki</option>
+          <option value="red">Akai</option>
+          <option value="green">Midori</option>
+          <option value="blue">Aoi</option>
+        </select>
+      </form>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <!--<script src="main.js"></script>-->
+    <script>
+      $(document).ready(function () {
+        // definir a cor de texto como vermelho
+        // var titleHeader = $("header").children().first();
+        // titleHeader.css("color", "red");
+
+        // variables
+        var color = "yellow";
+        var lightBulb = $("#light-bulb");
+        var lightsOn = false;
+        var lightSwitch = $("#light-switch");
+
+        // ligar a luz
+        lightSwitch.click(function () {
+          // b$("light-switch").removeClass()
+          lightBulb.toggleClass(`lit-${color}`);
+
+          // mudar o texto do butao para 'Switch off'
+          lightsOn = !lightsOn;
+
+          // botao de texto
+          // $(this).text(lightsOn ? "Switch off" : "Switch on");
+
+          // botao icon
+          $(this).css("color", lightsOn ? color : "black");
+        });
+
+        $("#color-picker").change(function () {
+          color = $(this).val();
+          if (lightBulb.attr("class")) {
+            // remove todas as classes e adiciona a classe lit-[cor selecionada]
+            lightBulb.removeClass().addClass(`lit-${color}`);
+
+            // muda a cor do icon de on/off
+            lightSwitch.css("color", lightsOn ? color : "black");
+          }
+
+          // console.log(color);
+        });
+      });
+    </script>
+  </body>
+</html>

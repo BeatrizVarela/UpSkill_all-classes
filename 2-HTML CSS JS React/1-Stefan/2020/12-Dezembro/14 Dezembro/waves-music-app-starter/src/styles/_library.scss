@@ -1,0 +1,109 @@
+.library {
+  width: 20rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgb(250, 224, 234),
+    rgb(206, 234, 255),
+    rgb(208, 255, 242)
+  );
+  background-size: 400% 400%;
+  animation: libraryAnimation 6s ease infinite;
+  height: 100%;
+  overflow-y: scroll;
+  box-shadow: 2px 2px 50px rgb(200, 200, 200);
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.68, -0.35, 0.27, 1.35),
+    opacity 0.5s ease;
+
+  h2 {
+    padding: 2rem;
+  }
+
+  &.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 10pt;
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  img {
+    width: 30%;
+  }
+
+  &.selected {
+    background-color: rgb(221, 215, 230);
+    /*     animation-name: selectedAnimationFrames;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.75, 0.72);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running; */
+    // handfull
+    animation: selectedAnimationFrames 2s cubic-bezier(0.47, 0, 0.75, 0.72) 5s
+      infinite alternate forwards running;
+  }
+
+  &:hover {
+    background-color: rgb(220, 225, 243);
+  }
+
+  .song-descrition {
+    padding: 1rem;
+    font-size: 10pt;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+@keyframes selectedAnimationFrames {
+  from {
+    background-color: rgba(238, 218, 240, 0.8);
+  }
+  to {
+    background-color: rgba(238, 218, 240, 0);
+  }
+}
+
+@keyframes libraryAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}

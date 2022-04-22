@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    120deg,
+    rgb(205, 217, 221),
+    rgb(241, 190, 198)
+  );
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bongo {
+  width: 10%;
+  height: 10%;
+  margin-left: 45%;
+  margin-right: 40%;
+}
+form input,
+form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+form button {
+  color: pink;
+  background-color: white;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.8s ease;
+}
+
+li {
+  flex: 1;
+}
+
+.trash-button,
+.check-button {
+  background-color: rgb(243, 205, 211);
+  border: none;
+  color: black;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.check-button {
+  background-color: lightblue;
+}
+
+.fa-check-square,
+.fa-trash-alt {
+  pointer-events: none;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+  /*transition: 1s ease;*/
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: black;
+  min-width: 13rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.5rem;
+  /*font-family: "Poppins", sans-serif;*/
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: lightpink;
+  top: 0;
+  right: 0;
+  padding: 1.1rem;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: lightpink;
+}

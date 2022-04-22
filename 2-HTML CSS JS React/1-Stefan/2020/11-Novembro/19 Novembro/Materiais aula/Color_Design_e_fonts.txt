@@ -1,0 +1,44 @@
+Analogous colours para app colours, é mais harmonioso
+Complementary Colours are good for attention grabbing screenshots mas n para a visibilidade normal
+Split colours, ir para o oposto mas depois ir para as analogous colours a volta do oposto
+Triadic colors sao balançadas e attention grabbbing mas ja foram overused nos 90's
+Monochromatic colours, pegar na mesma cor e juntar com branco e preto
+
+
+Tools:
+ColorHunt.co para color pallets faceis
+FlatUiColors.com 
+MaterialPalette.com
+ColorZilla
+
+FONTS-----------------TYPOGRAPHY--------------------------------
+Sans-Serif- Modern contemporary Design
+
+Serifs:
+Old Style-Adobe Jenson
+Transtional-Adobe Jenson
+Modern-Didot
+Slab-serif-American Typewriter
+
+Sans-Serifs:
+Grotesque-News Gothic
+Neo-Grotesque-Helvetica
+Humanist-Gill Sans
+Geometric-Futura
+
+Serif&Sans-Serif:
+Title is usually different from the body to create contrast
+Serif and Sans-Serifs combined work very nicely
+Don't mix Serif with Serif nor Sans-Serif with Sans-Serif
+Don't use too many fonts too, usually only use two.
+Don't mix different moods as well, they'll look out of place.
+
+WHAT TO DO:
+Similar- Moods & Time Era
+Contrast- Serif-ness & Weights
+
+
+Tools:
+WhatFont
+FontSquirrel
+Sky Fonts

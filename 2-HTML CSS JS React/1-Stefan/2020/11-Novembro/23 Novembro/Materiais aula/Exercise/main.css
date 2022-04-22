@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.square {
+    background-color: #8BC34A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    align-items: center;
+    height: 200pt;
+    width: 200pt;
+}
+
+img {
+    height: 200pt;
+    width: 200pt;
+}
+
+p {
+    /* margin: auto; */
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+}

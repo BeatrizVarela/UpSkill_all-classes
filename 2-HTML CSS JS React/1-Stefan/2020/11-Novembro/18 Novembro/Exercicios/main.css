@@ -1,0 +1,39 @@
+.zero {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    text-shadow: 4px 4px 2px rgba(226,166,166, 0.8);
+}
+
+.one {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12 pt;
+    -moz-box-shadow: 1px 1px 3px 2px #a6e2e2;
+    -webkit-box-shadow: 1px 1px 3px 2px #a6e2e2;
+    box-shadow: 1px 1px 3px 2px #a6e2e2;
+    width: 300px;
+}
+
+.two {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12 pt;
+    border:3px solid #e2e2a6;
+    width: 300px;
+    margin: 10px auto;      /*centra o objecto no ecrã*/
+}
+
+.three {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#c4e2a6;
+    font-size: 14pt;
+    height: 100px;
+    width: 300px;
+    display: flex;          /*passo 1*/
+    align-items: center;    /*passo 2: alinhar texto verticalmente na box*/
+}
+
+.four {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12 pt;
+    color:#c6a6e2;
+}
+

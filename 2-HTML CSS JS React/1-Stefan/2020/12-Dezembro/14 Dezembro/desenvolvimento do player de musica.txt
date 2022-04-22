@@ -1,0 +1,24 @@
+desenvolvimento do player de musica
+
+primeiro passo, perceber o que podem ser componentes "independentes"
+desconstruir em "caixas" - fazer em diagrama, ajuda a clarificar o que é necessário fazer
+
+criar um projecto react:
+terminal - npx create-react-app nomedaapp
+
+podemos fazer commits em topico:
+ex - git commits -m"cleanup" -m"blablabla"
+
+para instralar o fontawesome (é uma biblioteca de icons):
+npm install --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+sass react - terminal:
+npm install node-sass@4.14.1 --save
+
+src - criar pasta components - criar ficehiro para cada componente
+
+emmet sheat sheet - docs.emmet.io ---> atalhos produtivos
+
+npm instal uuidv4 - id generator

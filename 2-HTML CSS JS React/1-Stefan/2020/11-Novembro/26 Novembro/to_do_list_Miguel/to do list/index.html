@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel's to-do list</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>My to-do's</h1>
+    </header>
+    <img src="bong.gif" id="bongo">
+    <form>
+        <input type="text" placeholder="Insert something todo" class="todo-input">
+        <button type="submit" class="todo-insert"><i class="fas fa-plus"></i></button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <br>
+    <div class="todo-container">
+        <ul class="todo-list">
+            <!--<div class="todo">
+                <li class="todo-item"></li>
+                <button class="check-button"><i class="far fa-check-square"></i></button>
+                <button class="trash-button"><i class="far fa-trash-alt"></i></button>
+            </div>-->
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
