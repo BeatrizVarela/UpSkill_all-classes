@@ -1,0 +1,6 @@
+yarn add axios redux react-redux
+
+yarn add react-infinite-scroller
+
+yarn add redux-thunk
+
