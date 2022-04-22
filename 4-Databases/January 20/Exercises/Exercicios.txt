@@ -1,0 +1,31 @@
+Exercicios:
+2.1
+atributo-são descrições e qualificações que uma entidade pode ter e são representados por elipses
+
+dominio- é o conjunto de valores possiveis de um atributo 
+
+entidade- uma entidade é um conjunto de atributos, representando algo que é necessário guardar informação sobre
+
+relação- é uma associação entre várias entidades e representa a maneira que essas entidades conseguem estar relacionadas
+
+grupo de entidades- grupo de entidades semelhantes que partilham atributos e associações
+
+grupo de associações- grupo de associações (relações) semelhantes e representam o mesmo conjunto de entidades
+
+one-to-many-relationships- quando uma entidade tem varias chaves mas cada chave sendo unica para cada entidade, como por exemplo um cliente que tem varias encomendas
+
+many-to-many-relationships- quando uma entidade tem mais do que uma chave, e as chaves funcionam para varias entidades, como por exemplo estudantes para aulas
+
+retrição de participação-restrição que especifica se a existência de cada entidade depende ou não das outras entidades participantes no relacionamento
+
+restrição de sobreposição- determinam se dois subconjuntos podem conter a mesma entidade
+
+restrição de cobertura- determinam se todas as entidades estão representadas nos subconjuntos
+
+entidades fracas- Quando uma entidade não possui atributos chave é designada por entidade fraca. Entidades fracas estão sempre relacionadas (relacionamento identificador) com outra entidade
+
+agregação-Agregação indica que um conjunto de associações está associado com um outro conjunto de associações ou entidades
+
+identificador de relação- especifica a funçao de uma entidade num associaçao
+
+2.2
