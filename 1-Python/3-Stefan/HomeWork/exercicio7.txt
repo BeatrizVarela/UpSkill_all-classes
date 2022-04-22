@@ -1,0 +1,5 @@
+Néon 10 0.9002
+Argon 18 1.7818
+Cripton 36 3.708
+Xenon 54 5.851
+Radônio 86 9.97
