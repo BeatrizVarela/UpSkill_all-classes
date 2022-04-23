@@ -1,0 +1,16 @@
+HOW TO REST
+
+IMPORTANTE
+Para que serve uma API?
+
+1. Fazer a modelação, para consumir, criar e/ou consultar os DADOS de alguma coisa numa aplicação.
+Dados estaticos: dados inseridos manualmente, não dependem do estado da aplicação.
+Dados dinâmicos: gerados automaticamente, conforme a modelação previamente feita. Dependem do estado da aplicação.
+ORM - Obeject Relation Manager: trata da abstração entre o SQL e os dominios da aplicação, transforma base de dados em dados python.
+
+2. Serialização (representação dos DADOS): classes que convertem um objecto. É analoga ao Django, pode transformar objectos.
+Transforma dados em json, e json para dados - num dicionário python (primitivas python). Depois são ou lidos na request ou na response.
+HyperlinkedModelSerializer - lida com modelos Django, mostra uma lista de relações com os urls. Sem Hyperlinked, só mostraria as pks.
+
+3. Views: podem ser feitas de muitas maneiras - em função (@api_view), baseada em classes (APIView), em classes genericas (generics.XView), em classes high level (ViewSet). Esta última gera tudo automaticamente para um recurso.
+(generics.XView) - RetrieveUpdateDestroy - cria automaticamente as funcionalidades de obtenção/modificação/destruição de detalhes.

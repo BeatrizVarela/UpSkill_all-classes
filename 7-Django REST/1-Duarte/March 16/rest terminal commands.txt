@@ -1,0 +1,10 @@
+pip install django djangorestframework
+
+django-admin startproject API_IMDB
+
+django startapp drones
+
+user = User.objects.get(username="beatriz_user")
+
+
+
