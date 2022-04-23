@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{% block title %}☆What to Watcherino☆{% endblock %}</title>
+    <link {% load static %} href="{% static "css/whattowatch.css" %}"
+    rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="menu">Menu</a></li>
+        <li><a href="IMDB_TV">Logo IMDB TV</a></li>
+        <li><a href="search">Searchbar</a></li>
+        <li><a href="IMDB_Pro">IMDB Pro</a></li>
+        <li><a href="{% url 'what-to-watch:list' %}">Watchlist</a></li>
+        <li><a href="login">Sign In</a></li>
+      </ul>
+    </div>
+
+    {% block content %}
+
+      <div class="up-next">
+        <p class="title">What to Watch</p>
+        <ul>
+          <li>
+            <div class="container">
+              <a href="{% url 'what-to-watch:horimiya' %}">
+                <img
+                  src="https://i1.wp.com/anitrendz.net/news/wp-content/uploads/2020/09/Horimiya-Feature-Image.png"
+                  alt="horimiya"
+                />
+              </a>
+            </div>
+          
+          </li>
+          <li><a href="{% url 'what-to-watch:horimiya' %}">Horimiya</a></li>
+          <br />
+          <li>
+            <img
+              src="https://www.whats-on-netflix.com/wp-content/uploads/2020/03/when-is-jojos-bizarre-adventure-season-3-coming-to-netflix.jpg"
+              alt="jojos bizarre adventure"
+            />
+          </li>
+          <li><a href="/">JoJo's Bizarre Adventure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feat_today">
+      <p class="title">Featured today</p>
+      <ul>
+        <li>
+          <img
+          src="https://cdn.animenewsnetwork.com/thumbnails/max600x600/cms/interview/159723/matsumi1.jpg"
+          alt="beastars"
+          />
+        </li>
+        <li><a href="/">Beastars</a></li>
+
+        <br />
+        <br />
+
+        <li>
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/71LG683bkhL._AC_SL1500_.jpg"
+            alt="fullmetal alchemist brotherhood"
+          />
+        </li>
+        <li><a href="/">Fullmetal Alchemist Brotherhood</a></li>
+      </ul>
+    </div>
+
+    {% endblock %}
+
+  </body>
+
+</html>

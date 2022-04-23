@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+      <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{% url 'Series:serie_list' %}">Homepage</a>
+        <a href="{% url 'Movies:movie_list' %}">Movies</a>
+        <a href="{% url 'Series:serie_list' %}">Series</a>
+        <a href="{% url 'Staff:staff_list' %}">Staff</a>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'Accounts:logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'Accounts:login' %}">Login</a>
+        <a href="{% url 'Accounts:register' %}">Register</a>
+        {% endif %}
+    </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{% block title %}☆Horimiya☆{% endblock %}</title>
+    <link {% load static %} href="{% static "css/horimiya.css" %}"
+    rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="menu">Menu</a></li>
+        <li><a href="IMDB_TV">Logo IMDB TV</a></li>
+        <li><a href="search">Searchbar</a></li>
+        <li><a href="IMDB_Pro">IMDB Pro</a></li>
+        <li><a href="{% url 'what-to-watch:list' %}">Watchlist</a></li>
+        <li><a href="login">Sign In</a></li>
+      </ul>
+    </div>
+
+    {% block content %}
+
+    <p class="title">Horimiya</p>
+
+    <div class="anime">
+      <div class="image">
+        <img
+          src="https://i1.wp.com/anitrendz.net/news/wp-content/uploads/2020/09/Horimiya-Feature-Image.png"
+          alt="horimiya"
+          width="600"
+        />
+      </div>
+
+      <div class="text">
+        <p class="title-horimiya">Summary</p>
+        <p class="body-text">
+          On the surface, the thought of Kyouko Hori and Izumi Miyamura getting
+          along would be the last thing in people's minds. After all, Hori has a
+          perfect combination of beauty and brains, while Miyamura appears meek
+          and distant to his fellow classmates. However, a fateful meeting
+          between the two lays both of their hidden selves bare.
+        </p>
+        <p class="body-text">
+          Even though she is popular at school, Hori has little time to
+          socialize with her friends due to housework. On the other hand,
+          Miyamura lives under the noses of his peers, his body bearing secret
+          tattoos and piercings that make him look like a gentle delinquent.
+        </p>
+      </div>
+    </div>
+    <p class="description">
+      PG-13 | 23 min. per ep. | Slice of Life, Comedy, Romance, School, Shounen
+      | TV Series (2021– )
+    </p>
+    <p class="title-cast">Cast</p>
+    <div class="cast">
+      <p class="text-body">
+        Kyouko Hori voiced by
+        <a href="{% url 'haruka-tomatsu:list' %}">Haruka Tomatsu</a>
+      </p>
+      <p class="text-body">Izumi Miyamura voiced by Kouki Uchiyama</p>
+    </div>
+    {% endblock %}
+  </body>
+</html>

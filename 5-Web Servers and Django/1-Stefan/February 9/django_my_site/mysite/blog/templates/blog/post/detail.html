@@ -1,0 +1,55 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p class="date">
+    Published {{ post.publish }} by {{ post.author }}
+  </p>
+  {{ post.body|markdown }}
+
+  <h2>Similar posts</h2>
+  {% for similar_post in similar_posts %}
+    <p>
+      <a href="{{ similar_post.get_absolute_url }}">{{ similar_post.title }}</a>
+
+    </p>
+  {% empty %}
+    There are no similar posts yet.
+  {% endfor %}
+
+  {% with post.comments.count as total_comments %} {# varivel #}
+  <h2>
+    {{ total_comments }} comment{{ total_comments|pluralize }}
+  </h2>
+  {% endwith %}
+  {% for comment in post.comments.all %}
+    <div class="comment">
+      <p class="info">
+        Comment {{ forloop.counter }} by {{comment.name}} {{comment.created}}
+      </p>
+      {{ comment.body|linebreaks }}
+    </div>
+  {% empty %}
+    <p>
+      There are no comments yet.
+    </p>
+  {% endfor %}
+  {% if new_comment %}
+    <h2>You comment has benn added. </h2>
+  {% else %}
+    <h2>Add new comment</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <p>
+        <input type="submit" value="Add comment">
+      </p>
+    </form>
+  {% endif %}
+
+{% endblock %}
+
+{# | - significa filtro, pega no resultado da esquerda e aplica a aperação da direita #}

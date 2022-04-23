@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}☆Moviezinhos☆{% endblock %}
+
+{% block content %}
+    <div class="movie-list">
+        {% for s in movies %}
+        <div class="movie">
+            <a href={{s.get_absolute_url}}><h1>{{s.name}}</h1></a>
+            <img src={{s.images.url}} alt={{s.name}} />
+        </div>
+        {% endfor %}
+    </div>
+{% include 'paginator.html' with page=movies %}
+{% endblock %}

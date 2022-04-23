@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}☆Pissoinhas☆{% endblock %}
+
+{% block content %}
+    <div class="staff-list">
+        {% for s in staff %}
+        <div class="staff">
+            <a href={{s.get_absolute_url}}><h1>{{s.name}}</h1></a>
+            <img src={{s.photos.url}} alt={{s.name}} />
+        </div>
+        {% endfor %}
+    </div>
+{% include 'paginator.html' with page=staff %}
+{% endblock %}

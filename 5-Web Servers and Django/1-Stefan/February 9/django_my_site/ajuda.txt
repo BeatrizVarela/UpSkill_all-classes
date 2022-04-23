@@ -1,0 +1,36 @@
+
+trabalhar na Shell
+
+(mysite) C:\Users\Huga\Desktop\Python\BackEnd\aula_Stef_9fev2021\mysite\mysite>py manage.py createsuperuser
+Username (leave blank to use 'huga'): admin
+Email address:
+Password:
+Password (again):
+Superuser created successfully.
+
+(mysite) C:\Users\Huga\Desktop\Python\BackEnd\aula_Stef_9fev2021\mysite\mysite>py manage.py shell
+Python 3.8.6 (tags/v3.8.6:db45529, Sep 23 2020, 15:52:53) [MSC v.1927 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.django.contrib.auth.models import User
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'django.django'
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.filter(id=1).first()
+>>> user
+<User: admin>
+>>> user.blog_post
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'User' object has no attribute 'blog_post'
+>>> user.blog_posts
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x000001633C65BC40>
+>>> user.blog_posts.all()
+<QuerySet [<Post: Blog 3>, <Post: Blog 2>, <Post: BLog 1>]>
+>>>
+
+
+para sair da shell
+exit()
+------------------------------

@@ -1,0 +1,43 @@
+{% load blog_tags %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="sidebar">
+    <h2>My blog</h2>
+      <br>
+        {% if request.user.is_authenticated %}
+        <h3>
+          Welcome, {{ request.user.username }}!
+        </h3>
+        <a href="{% url "accounts:logout" %}">Log-out</a>
+    {% else %}
+      <a href="{% url "accounts:login" %}">Log-in</a>
+      <br>
+      <a href="{% url "accounts:register" %}">Register</a>
+    {% endif %}
+    <p>This is my blog.</p>
+    <p>I've written {% total_posts %} posts </p>
+    <h3>Latest Posts</h3>
+    {% show_latest_posts 4 %}
+
+    <h3>Number of visits: {{ request.COOKIES.num_visitas }}</h3>
+
+
+
+
+
+    {% search_bar %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}☆{{serie.name}}☆{% endblock %}
+
+{% block content %}
+    <div class="serie">
+        <h1>{{serie.name}}</h1>
+        <img src={{serie.images.url}} alt={{serie.name}} />
+        <p>{{serie.duration}}</p>
+        <p>{{serie.rating}}</p>
+        <p>{{serie.evaluation}}</p>
+        <p>{{serie.release_date}}</p>
+        <h3>Summary</h3>
+        <p>{{serie.description}}</p>
+        <h3>Genres</h3>
+        <p>{{serie.tags.all|join:', '}}</p>
+
+        <h3>Actors</h3>
+        {% for actor in serie.actors.all %}
+        <a href={{actor.person.get_absolute_url}}>{{actor.person.name}}{% if forloop.last %}.{% else %}, {% endif %}</a>
+        {% endfor %}
+
+        <h3>Directors</h3>
+        {% for director in serie.director.all %}
+        <a href={{director.person.get_absolute_url}}>{{director}}{% if forloop.last %}.{% else %}, {% endif %}</a>
+        {% endfor %}
+
+        <h3>Writers</h3>
+        {% for writer in serie.writer.all %}
+        <a href={{writer.person.get_absolute_url}}>{{writer}}{% if forloop.last %}.{% else %}, {% endif %}</a>
+        {% endfor %}
+
+        <h3>Episodes</h3>
+        {% for ep in serie.eps.all %}
+        <p>"{{ep.name}}", Season {{ep.season}} Episode {{ep.number}}</p>
+        {% endfor %}
+
+        <br />
+    </div>
+    <a href="{% url 'Series:serie_list' %}"><button>Back</button></a>
+{% endblock %}

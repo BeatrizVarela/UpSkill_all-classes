@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="sidebar">
+    <h2>My blog</h2>
+    <p>This is my blog.</p>
+    {% if request.user.is_authenticated %}
+        <h3>
+          Welcome, {{ request.user.username }}!
+        </h3>
+        <a href="{% url "accounts:logout" %}">Log-out</a>
+    {% else %}
+      <a href="{% url "accounts:login" %}">Log-in</a>
+    {% endif %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}☆{{movie.name}}☆{% endblock %}
+
+{% block content %}
+    <div class="movie">
+        <h1>{{movie.name}}</h1>
+        <img src={{movie.images.url}} alt={{movie.name}} />
+        <p>{{movie.duration}}</p>
+        <p>{{movie.rating}}</p>
+        <p>{{movie.evaluation}}</p>
+        <p>{{movie.release_date}}</p>
+        <p>{{movie.description}}</p>
+
+        <p>{{movie.tags.all|join:', '}}</p>
+        <p>{{movie.actors.all|join:', '}}</p>
+
+        {% for director in movie.director.all %}
+        <p>{{director}}{% if forloop.last %}.{% else %}, {% endif %}</p>
+        {% endfor %}
+        {% for writer in movie.writer.all %}
+        <p>{{writer}}{% if forloop.last %}.{% else %}, {% endif %}</p>
+        {% endfor %}
+    </div>
+    <a href="{% url 'Movies:movie_list' %}"><button>Back</button></a>
+{% endblock %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{% block title %}☆Haruka Tomatsu☆{% endblock %}</title>
+    <link {% load static %} href="{% static "css/actores.css" %}"
+    rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="menu">Menu</a></li>
+        <li><a href="IMDB_TV">Logo IMDB TV</a></li>
+        <li><a href="search">Searchbar</a></li>
+        <li><a href="IMDB_Pro">IMDB Pro</a></li>
+        <li><a href="{% url 'what-to-watch:list' %}">Watchlist</a></li>
+        <li><a href="login">Sign In</a></li>
+      </ul>
+    </div>
+
+    {% block content %}
+    <div class="body">
+      <p class="title">Haruka Tomatsu</p>
+      <p class="description">Actress</p>
+      <div class="actress">
+        <div class="image">
+          <img
+            src="https://cdn.myanimelist.net/images/voiceactors/2/54591.jpg"
+            alt="haruka-tomatsu"
+          />
+        </div>
+
+        <div class="text">
+          <p class="body-text">
+            Haruka debuted as seiyuu in 2007, starring in Shinkyoku Soukai
+            Polyphonica as Corticarte Apa Lagranges. Since then, she has had
+            other major roles such as Lala Satalin Deviluke in To Love-Ru and
+            Shiho Sannomiya in Zettai Karen Children. Before graduating from
+            high school in 2008, Haruka used to live in Ichimomiya city where
+            she often took the shinkansen, travelling back and forth between
+            Nagoya and Tokyo to attend recordings. She has since entered a
+            university in Tokyo, where she now resides.
+          </p>
+          <p class="body-text">One of the members of seiyuu group, Sphere.</p>
+        </div>
+      </div>
+      <p class="title-known">Known For</p>
+      <div class="known-for">
+        <div class="image">
+          <img
+            src="https://cdn.myanimelist.net/images/characters/16/318188.jpg"
+            alt="hori"
+            width="100"
+          />
+        </div>
+
+        <div class="text-known">
+          <a href="{% url 'what-to-watch:horimiya' %}">Horimiya</a>
+          <br />
+          <p>Kyouko Hori</p>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+  </body>
+</html>

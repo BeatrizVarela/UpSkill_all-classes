@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p class="date">
+    Published {{ post.publish }} by {{ post.author }}
+  </p>
+  {{ post.body|linebreaks }}
+
+  <h2>Similar Posts</h2>
+  {{ post.body|markdown }}
+    <p>
+      <a href="{{ similar_post.get_absolute_path }}">{{similar_post.title}}</a>
+    </p>
+  {% empty %}
+    There are no similar posts yet.
+  {% endfor %}
+  {% if new_comment %}
+    <h2>Your comment has been added.</h2>
+
+
+  {% with post.comments.count as total_comments %}
+  <h2>
+    {{ total_comments }} comment {{ total_comments|pluralize }}
+  </h2>
+
+
+
+{% endblock %}

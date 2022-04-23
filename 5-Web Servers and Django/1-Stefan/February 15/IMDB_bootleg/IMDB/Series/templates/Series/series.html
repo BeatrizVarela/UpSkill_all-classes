@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}☆Serizinhas☆{% endblock %}
+
+{% block content %}
+<div class="up-next">
+    <!--
+    <p class="title">What to Watch</p>
+    <ul>
+        <li>
+            <div class="container">
+              <a href="{% url 'what-to-watch:horimiya' %}">
+                <img
+                  src="https://i1.wp.com/anitrendz.net/news/wp-content/uploads/2020/09/Horimiya-Feature-Image.png"
+                  alt="horimiya"
+                />
+              </a>
+            </div>
+
+        </li>
+          <li><a href="{% url 'what-to-watch:horimiya' %}">Horimiya</a></li>
+          <br />
+          <li>
+            <img
+              src="https://www.whats-on-netflix.com/wp-content/uploads/2020/03/when-is-jojos-bizarre-adventure-season-3-coming-to-netflix.jpg"
+              alt="jojos bizarre adventure"
+            />
+          </li>
+          <li><a href="/">JoJo's Bizarre Adventure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feat_today">
+      <p class="title">Featured today</p>
+      <ul>
+        <li>
+          <img
+          src="https://cdn.animenewsnetwork.com/thumbnails/max600x600/cms/interview/159723/matsumi1.jpg"
+          alt="beastars"
+          />
+        </li>
+        <li><a href="/">Beastars</a></li>
+
+        <br />
+        <br />
+
+        <li>
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/71LG683bkhL._AC_SL1500_.jpg"
+            alt="fullmetal alchemist brotherhood"
+          />
+        </li>
+        <li><a href="/">Fullmetal Alchemist Brotherhood</a></li>
+      </ul>
+    </div>
+-->
+
+<div class="series-list">
+    {% for s in series %}
+    <div class="serie">
+        <h1>{{s.name}}</h1>
+        <img src={{s.images.url}} alt={{s.name}} />
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
